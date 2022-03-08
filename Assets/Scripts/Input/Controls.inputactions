@@ -6,35 +6,35 @@
             "id": "17b50f40-81c8-470b-b93a-54dec7fa9b97",
             "actions": [
                 {
-                    "name": "Drop Annotation",
+                    "name": "Select Option",
                     "type": "Button",
-                    "id": "87f0ec98-942f-4d8f-80b5-dd247c2c0bcd",
+                    "id": "567b65fb-65b7-422c-9acf-8929fba7be48",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "MultiTap",
+                    "interactions": "",
                     "initialStateCheck": false
                 }
             ],
             "bindings": [
                 {
                     "name": "",
-                    "id": "b7afc0e0-b000-4540-acec-bd6b47e0b6e0",
-                    "path": "<Mouse>/leftButton",
+                    "id": "3f067871-3ce3-40dd-b6cc-59bfd9f2345a",
+                    "path": "<Touchscreen>/Press",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Drop Annotation",
+                    "action": "Select Option",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "9c6b7176-eb38-4dba-a48a-6112d79ed3f4",
-                    "path": "<Touchscreen>/touch0/tap",
+                    "id": "14d712d8-9b6d-4e71-80ff-f3e96ecd8aa0",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Drop Annotation",
+                    "action": "Select Option",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -49,7 +49,25 @@
                     "type": "PassThrough",
                     "id": "268635ea-1122-45a0-955b-24738271434a",
                     "expectedControlType": "",
-                    "processors": "StickDeadzone",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Scale Object",
+                    "type": "PassThrough",
+                    "id": "946e4f1e-94f1-401b-9096-a2fed7afc9fb",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Annotate Object",
+                    "type": "Button",
+                    "id": "313aff93-e98d-4665-9b31-7a99b0680805",
+                    "expectedControlType": "Button",
+                    "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 }
@@ -67,37 +85,98 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "Mouse Drag",
-                    "id": "19d70157-2d71-4830-a388-737f55cc93de",
-                    "path": "OneModifier",
+                    "name": "",
+                    "id": "0b5fb597-6964-40a1-b18b-0836cb9afbe8",
+                    "path": "<Mouse>/delta",
                     "interactions": "",
-                    "processors": "",
+                    "processors": "AxisDeadzone(max=50)",
                     "groups": "",
                     "action": "Rotate Object",
-                    "isComposite": true,
+                    "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "modifier",
-                    "id": "66de2710-2328-40a7-89a8-fee0170664c7",
-                    "path": "<Mouse>/leftButton",
+                    "name": "",
+                    "id": "c5a6e3b3-b92f-4cbb-90f8-6cb3864e8ba3",
+                    "path": "<Touchscreen>/touch*/Press",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Rotate Object",
+                    "action": "Scale Object",
                     "isComposite": false,
-                    "isPartOfComposite": true
+                    "isPartOfComposite": false
                 },
                 {
-                    "name": "binding",
-                    "id": "65081366-579b-442e-802f-e57529bff7e7",
-                    "path": "<Mouse>/delta",
+                    "name": "",
+                    "id": "eac2c7dc-9c43-44a3-85ff-1de51ec688ef",
+                    "path": "<Mouse>/scroll/y",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Rotate Object",
+                    "action": "Scale Object",
                     "isComposite": false,
-                    "isPartOfComposite": true
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d81023e9-2927-401b-a393-f5f7a489ef3f",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Annotate Object",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7c7d270a-d910-4160-ae4f-a525ebb52e17",
+                    "path": "<Touchscreen>/Press",
+                    "interactions": "MultiTap",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Annotate Object",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Default",
+            "id": "94b4bbe4-1eb6-418f-8cef-35673a634cdc",
+            "actions": [
+                {
+                    "name": "Interact",
+                    "type": "Button",
+                    "id": "a3e4722f-88df-4a61-bafe-50007d26c00b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "271fc709-5369-4374-aa4d-97ae17908480",
+                    "path": "<Touchscreen>/touch*/press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fc62232c-fd69-41ea-9a5e-010c3323d3dc",
+                    "path": "<Mouse>/press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
