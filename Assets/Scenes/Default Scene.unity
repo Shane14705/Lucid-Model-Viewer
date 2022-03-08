@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 489123361}
   - component: {fileID: 489123362}
+  - component: {fileID: 489123363}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -166,6 +167,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18b7d531692e74c44a7b9e2aa5414062, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &489123363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489123360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1424795628, guid: c424820a8880b8845bda10ec0b41507e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _obsoleteAppKey: 
+  _normcoreAppSettings: {fileID: 11400000, guid: e8fea0385a3e4024cbc9d6e345e9b382, type: 2}
+  _roomToJoinOnStart: Test Room
+  _joinRoomOnStart: 1
 --- !u!1 &594066445
 GameObject:
   m_ObjectHideFlags: 0

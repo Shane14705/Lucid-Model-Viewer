@@ -11,6 +11,9 @@ and if the click or touch screen ray hits a ui element it switches to ui action 
 */
 
 //For pinch input, detect on start of multi touch and run until the event ends, keeping track of the change from original positions
+
+//This must run early on so that other scripts can bind to its events
+[DefaultExecutionOrder(-1)]
 public class InputManager : MonoBehaviour
 {
     private Controls ControlBindings;
@@ -19,13 +22,13 @@ public class InputManager : MonoBehaviour
     //I made custom events for every binding, so that I can perform custom input processing if necessary (such as with pinch/zoom)
     #region Event/Delegate Declarations
     public delegate void RotationInput(InputAction.CallbackContext ctx);
-    public static event RotationInput OnRotInput;
+    public event RotationInput OnRotInput;
 
     public delegate void ScaleInput(float targetScalar);
-    public static event ScaleInput OnScalingInput;
+    public event ScaleInput OnScalingInput;
 
     public delegate void AnnotationInput(InputAction.CallbackContext ctx);
-    public static event AnnotationInput OnAddAnnotation;
+    public event AnnotationInput OnAddAnnotation;
     #endregion
     
     //TODO: Setup events and delegates for UI input actions too, and decide where their logic should be handled (need to learn more about Unity UI first)    

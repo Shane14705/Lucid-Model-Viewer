@@ -28,35 +28,35 @@ public partial class @Controls : IInputActionCollection2, IDisposable
             ""id"": ""17b50f40-81c8-470b-b93a-54dec7fa9b97"",
             ""actions"": [
                 {
-                    ""name"": ""Drop Annotation"",
+                    ""name"": ""Select Option"",
                     ""type"": ""Button"",
-                    ""id"": ""87f0ec98-942f-4d8f-80b5-dd247c2c0bcd"",
+                    ""id"": ""567b65fb-65b7-422c-9acf-8929fba7be48"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""MultiTap"",
+                    ""interactions"": """",
                     ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""b7afc0e0-b000-4540-acec-bd6b47e0b6e0"",
-                    ""path"": ""<Mouse>/leftButton"",
+                    ""id"": ""3f067871-3ce3-40dd-b6cc-59bfd9f2345a"",
+                    ""path"": ""<Touchscreen>/Press"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Drop Annotation"",
+                    ""action"": ""Select Option"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""9c6b7176-eb38-4dba-a48a-6112d79ed3f4"",
-                    ""path"": ""<Touchscreen>/touch0/tap"",
+                    ""id"": ""14d712d8-9b6d-4e71-80ff-f3e96ecd8aa0"",
+                    ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Drop Annotation"",
+                    ""action"": ""Select Option"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -71,7 +71,25 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""type"": ""PassThrough"",
                     ""id"": ""268635ea-1122-45a0-955b-24738271434a"",
                     ""expectedControlType"": """",
-                    ""processors"": ""StickDeadzone"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Scale Object"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""946e4f1e-94f1-401b-9096-a2fed7afc9fb"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Annotate Object"",
+                    ""type"": ""Button"",
+                    ""id"": ""313aff93-e98d-4665-9b31-7a99b0680805"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
                 }
@@ -89,37 +107,98 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""Mouse Drag"",
-                    ""id"": ""19d70157-2d71-4830-a388-737f55cc93de"",
-                    ""path"": ""OneModifier"",
+                    ""name"": """",
+                    ""id"": ""0b5fb597-6964-40a1-b18b-0836cb9afbe8"",
+                    ""path"": ""<Mouse>/delta"",
                     ""interactions"": """",
-                    ""processors"": """",
+                    ""processors"": ""AxisDeadzone(max=50)"",
                     ""groups"": """",
                     ""action"": ""Rotate Object"",
-                    ""isComposite"": true,
+                    ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""modifier"",
-                    ""id"": ""66de2710-2328-40a7-89a8-fee0170664c7"",
-                    ""path"": ""<Mouse>/leftButton"",
+                    ""name"": """",
+                    ""id"": ""c5a6e3b3-b92f-4cbb-90f8-6cb3864e8ba3"",
+                    ""path"": ""<Touchscreen>/touch*/Press"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Rotate Object"",
+                    ""action"": ""Scale Object"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": true
+                    ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""binding"",
-                    ""id"": ""65081366-579b-442e-802f-e57529bff7e7"",
-                    ""path"": ""<Mouse>/delta"",
+                    ""name"": """",
+                    ""id"": ""eac2c7dc-9c43-44a3-85ff-1de51ec688ef"",
+                    ""path"": ""<Mouse>/scroll/y"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Rotate Object"",
+                    ""action"": ""Scale Object"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": true
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d81023e9-2927-401b-a393-f5f7a489ef3f"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Annotate Object"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7c7d270a-d910-4160-ae4f-a525ebb52e17"",
+                    ""path"": ""<Touchscreen>/Press"",
+                    ""interactions"": ""MultiTap"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Annotate Object"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Default"",
+            ""id"": ""94b4bbe4-1eb6-418f-8cef-35673a634cdc"",
+            ""actions"": [
+                {
+                    ""name"": ""Interact"",
+                    ""type"": ""Button"",
+                    ""id"": ""a3e4722f-88df-4a61-bafe-50007d26c00b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""271fc709-5369-4374-aa4d-97ae17908480"",
+                    ""path"": ""<Touchscreen>/touch*/press"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fc62232c-fd69-41ea-9a5e-010c3323d3dc"",
+                    ""path"": ""<Mouse>/press"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -128,10 +207,15 @@ public partial class @Controls : IInputActionCollection2, IDisposable
 }");
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
-        m_UI_DropAnnotation = m_UI.FindAction("Drop Annotation", throwIfNotFound: true);
+        m_UI_SelectOption = m_UI.FindAction("Select Option", throwIfNotFound: true);
         // Model_Interaction
         m_Model_Interaction = asset.FindActionMap("Model_Interaction", throwIfNotFound: true);
         m_Model_Interaction_RotateObject = m_Model_Interaction.FindAction("Rotate Object", throwIfNotFound: true);
+        m_Model_Interaction_ScaleObject = m_Model_Interaction.FindAction("Scale Object", throwIfNotFound: true);
+        m_Model_Interaction_AnnotateObject = m_Model_Interaction.FindAction("Annotate Object", throwIfNotFound: true);
+        // Default
+        m_Default = asset.FindActionMap("Default", throwIfNotFound: true);
+        m_Default_Interact = m_Default.FindAction("Interact", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -191,12 +275,12 @@ public partial class @Controls : IInputActionCollection2, IDisposable
     // UI
     private readonly InputActionMap m_UI;
     private IUIActions m_UIActionsCallbackInterface;
-    private readonly InputAction m_UI_DropAnnotation;
+    private readonly InputAction m_UI_SelectOption;
     public struct UIActions
     {
         private @Controls m_Wrapper;
         public UIActions(@Controls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @DropAnnotation => m_Wrapper.m_UI_DropAnnotation;
+        public InputAction @SelectOption => m_Wrapper.m_UI_SelectOption;
         public InputActionMap Get() { return m_Wrapper.m_UI; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -206,16 +290,16 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         {
             if (m_Wrapper.m_UIActionsCallbackInterface != null)
             {
-                @DropAnnotation.started -= m_Wrapper.m_UIActionsCallbackInterface.OnDropAnnotation;
-                @DropAnnotation.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnDropAnnotation;
-                @DropAnnotation.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnDropAnnotation;
+                @SelectOption.started -= m_Wrapper.m_UIActionsCallbackInterface.OnSelectOption;
+                @SelectOption.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnSelectOption;
+                @SelectOption.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnSelectOption;
             }
             m_Wrapper.m_UIActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @DropAnnotation.started += instance.OnDropAnnotation;
-                @DropAnnotation.performed += instance.OnDropAnnotation;
-                @DropAnnotation.canceled += instance.OnDropAnnotation;
+                @SelectOption.started += instance.OnSelectOption;
+                @SelectOption.performed += instance.OnSelectOption;
+                @SelectOption.canceled += instance.OnSelectOption;
             }
         }
     }
@@ -225,11 +309,15 @@ public partial class @Controls : IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Model_Interaction;
     private IModel_InteractionActions m_Model_InteractionActionsCallbackInterface;
     private readonly InputAction m_Model_Interaction_RotateObject;
+    private readonly InputAction m_Model_Interaction_ScaleObject;
+    private readonly InputAction m_Model_Interaction_AnnotateObject;
     public struct Model_InteractionActions
     {
         private @Controls m_Wrapper;
         public Model_InteractionActions(@Controls wrapper) { m_Wrapper = wrapper; }
         public InputAction @RotateObject => m_Wrapper.m_Model_Interaction_RotateObject;
+        public InputAction @ScaleObject => m_Wrapper.m_Model_Interaction_ScaleObject;
+        public InputAction @AnnotateObject => m_Wrapper.m_Model_Interaction_AnnotateObject;
         public InputActionMap Get() { return m_Wrapper.m_Model_Interaction; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -242,6 +330,12 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 @RotateObject.started -= m_Wrapper.m_Model_InteractionActionsCallbackInterface.OnRotateObject;
                 @RotateObject.performed -= m_Wrapper.m_Model_InteractionActionsCallbackInterface.OnRotateObject;
                 @RotateObject.canceled -= m_Wrapper.m_Model_InteractionActionsCallbackInterface.OnRotateObject;
+                @ScaleObject.started -= m_Wrapper.m_Model_InteractionActionsCallbackInterface.OnScaleObject;
+                @ScaleObject.performed -= m_Wrapper.m_Model_InteractionActionsCallbackInterface.OnScaleObject;
+                @ScaleObject.canceled -= m_Wrapper.m_Model_InteractionActionsCallbackInterface.OnScaleObject;
+                @AnnotateObject.started -= m_Wrapper.m_Model_InteractionActionsCallbackInterface.OnAnnotateObject;
+                @AnnotateObject.performed -= m_Wrapper.m_Model_InteractionActionsCallbackInterface.OnAnnotateObject;
+                @AnnotateObject.canceled -= m_Wrapper.m_Model_InteractionActionsCallbackInterface.OnAnnotateObject;
             }
             m_Wrapper.m_Model_InteractionActionsCallbackInterface = instance;
             if (instance != null)
@@ -249,16 +343,61 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 @RotateObject.started += instance.OnRotateObject;
                 @RotateObject.performed += instance.OnRotateObject;
                 @RotateObject.canceled += instance.OnRotateObject;
+                @ScaleObject.started += instance.OnScaleObject;
+                @ScaleObject.performed += instance.OnScaleObject;
+                @ScaleObject.canceled += instance.OnScaleObject;
+                @AnnotateObject.started += instance.OnAnnotateObject;
+                @AnnotateObject.performed += instance.OnAnnotateObject;
+                @AnnotateObject.canceled += instance.OnAnnotateObject;
             }
         }
     }
     public Model_InteractionActions @Model_Interaction => new Model_InteractionActions(this);
+
+    // Default
+    private readonly InputActionMap m_Default;
+    private IDefaultActions m_DefaultActionsCallbackInterface;
+    private readonly InputAction m_Default_Interact;
+    public struct DefaultActions
+    {
+        private @Controls m_Wrapper;
+        public DefaultActions(@Controls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Interact => m_Wrapper.m_Default_Interact;
+        public InputActionMap Get() { return m_Wrapper.m_Default; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(DefaultActions set) { return set.Get(); }
+        public void SetCallbacks(IDefaultActions instance)
+        {
+            if (m_Wrapper.m_DefaultActionsCallbackInterface != null)
+            {
+                @Interact.started -= m_Wrapper.m_DefaultActionsCallbackInterface.OnInteract;
+                @Interact.performed -= m_Wrapper.m_DefaultActionsCallbackInterface.OnInteract;
+                @Interact.canceled -= m_Wrapper.m_DefaultActionsCallbackInterface.OnInteract;
+            }
+            m_Wrapper.m_DefaultActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Interact.started += instance.OnInteract;
+                @Interact.performed += instance.OnInteract;
+                @Interact.canceled += instance.OnInteract;
+            }
+        }
+    }
+    public DefaultActions @Default => new DefaultActions(this);
     public interface IUIActions
     {
-        void OnDropAnnotation(InputAction.CallbackContext context);
+        void OnSelectOption(InputAction.CallbackContext context);
     }
     public interface IModel_InteractionActions
     {
         void OnRotateObject(InputAction.CallbackContext context);
+        void OnScaleObject(InputAction.CallbackContext context);
+        void OnAnnotateObject(InputAction.CallbackContext context);
+    }
+    public interface IDefaultActions
+    {
+        void OnInteract(InputAction.CallbackContext context);
     }
 }
