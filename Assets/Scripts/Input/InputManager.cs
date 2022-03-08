@@ -99,12 +99,14 @@ public class InputManager : MonoBehaviour
 
         if (interactionCast.collider.CompareTag("Model"))
         {
+            Debug.Log("Disabling UI, enabling model!");
             ControlBindings.UI.Disable();
             ControlBindings.Model_Interaction.Enable();
         }
         
         else if (interactionCast.collider.CompareTag("UI"))
         {
+            Debug.Log("Disabling model, enabling UI!");
             ControlBindings.Model_Interaction.Disable();
             ControlBindings.UI.Enable();
         }
