@@ -1,0 +1,76 @@
+{
+    "name": "HostControls",
+    "maps": [
+        {
+            "name": "Default",
+            "id": "58608a18-561e-4068-a560-359d2f33a04f",
+            "actions": [
+                {
+                    "name": "Select Position",
+                    "type": "PassThrough",
+                    "id": "ea6bc4f0-9d6e-48ed-bc2b-a1a7bd17b2f0",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Select UI",
+                    "type": "Button",
+                    "id": "a2b8de67-fe98-47c2-b9f5-555eec21ef73",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "e07fc459-5587-48b9-8f1d-95058d0b0775",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Select Position",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "faf25f89-fc41-45d3-9450-c42ca037988a",
+                    "path": "<Touchscreen>/primaryTouch/tap",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Select Position",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "32f7c074-3c92-45c9-8d2d-e7eb9e7a220f",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Select UI",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7709227b-97eb-4896-a9ba-740371466696",
+                    "path": "<Touchscreen>/primaryTouch/tap",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Select UI",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

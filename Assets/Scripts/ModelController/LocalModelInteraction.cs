@@ -14,7 +14,7 @@ using UnityEngine.InputSystem;
  and mirror has much more overhead cost as it must run a headless instance of Unity on the server (since school networks wont be super friendly to port forwarding I assume).
  */
 [RequireComponent(typeof(Rigidbody))]
-public class ModelInteraction : MonoBehaviour
+public class LocalModelInteraction : MonoBehaviour
 {
     //Possibly make the Scene Manager a singleton later on to simplify this?
 
