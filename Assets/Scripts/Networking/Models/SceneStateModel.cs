@@ -7,7 +7,8 @@ using Normal.Realtime.Serialization;
 [RealtimeModel]
 public partial class SceneStateModel
 {
-    //Holds annotations and their locations on the model
+    //Holds annotations and their locations on the model -- whenever a new annotation is created, it is added to this list.
+    //When an annotation is removed or added, the SceneStateComponent will add/remove it to the scene
     [RealtimeProperty(1, true, true)]
     private RealtimeDictionary<AnnotationModel> _annotations;
     
