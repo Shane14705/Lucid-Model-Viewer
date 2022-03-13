@@ -164,7 +164,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 67670640}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c239a007eaad9148b84005851180810, type: 3}
+  m_Script: {fileID: 11500000, guid: 6e7e3747d1f02d84782bcfffbe109109, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &67670643
@@ -188,6 +188,8 @@ MonoBehaviour:
   _sceneViewDestroyWhenLastClientLeaves: 1
   _components:
   - componentID: 1
+    component: {fileID: 0}
+  - componentID: 2
     component: {fileID: 67670642}
   _childViews: []
 --- !u!1 &489123360
