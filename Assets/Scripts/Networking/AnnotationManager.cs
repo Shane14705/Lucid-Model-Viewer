@@ -11,6 +11,18 @@ public class AnnotationManager : MonoBehaviour
     //Question: can the annotation model have an owner even though it has no RealtimeComponent (to lock editing to only certain clients)?
     private AnnotationModel _annotationReference;
 
+    public AnnotationModel AnnotationReference
+    {
+        get => _annotationReference;
+        set => _annotationReference = value;
+    }
+
+    public ObjectViewManager ObjectManager
+    {
+        get => _objectManager;
+        set => _objectManager = value;
+    }
+
     private ObjectViewManager _objectManager;
 
     private uint _dictKey;
