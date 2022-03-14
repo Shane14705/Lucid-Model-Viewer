@@ -80,6 +80,7 @@ public class ObjectViewManager : RealtimeComponent<ObjectViewModel>
         Debug.Log("inserting?");
         try
         {
+            //TODO: FIX BUG WHERE ANNOTATIONMANAGER TRIES TO SETUP IMMEDIATELY AFTER BEING INSTANTIATED HERE, EVEN THOUGH ITS PARAMETERS DONT GET FILLED IN TILL LATER
             _AnnotationRegistry.Add(annotationModel, Instantiate(_annotationPrefab).GetComponent<AnnotationManager>());
         }
         catch (ArgumentException exception)
@@ -89,6 +90,7 @@ public class ObjectViewManager : RealtimeComponent<ObjectViewModel>
                 "Something has gone horribly wrong: Attempt to add AnnotationModel to registry when it already exists");
         }
 
+        
         _AnnotationRegistry.TryGetValue(annotationModel, out _newAnnotationManager);
         //We could eventually be giving each piece of a 3d Model its own ObjectManager, in which case this becomes important. Probably should consider the performance issues of such a system though...
         _newAnnotationManager.ObjectManager = this;
