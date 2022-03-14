@@ -25,21 +25,15 @@ public class AnnotationManager : MonoBehaviour
 
     private ObjectViewManager _objectManager;
     
-    
-    private void Awake()
-    {
-        this._annotationReference.annotationLocationDidChange += UpdateAnnotationLocation;    
-        this._annotationReference.annotationTextDidChange += UpdateAnnotationText;
-    }
 
     //This function will handle changing the text that goes with the annotation
-    private void UpdateAnnotationText(AnnotationModel model, string value)
+    public void UpdateAnnotationText(AnnotationModel model, string value)
     {
         throw new NotImplementedException();
     }
 
     //This function will handle changing the point on the 3d model where the annotation should stem from
-    private void UpdateAnnotationLocation(AnnotationModel model, Vector3 value)
+    public void UpdateAnnotationLocation(AnnotationModel model, Vector3 value)
     {
         throw new NotImplementedException();
     }
@@ -47,6 +41,7 @@ public class AnnotationManager : MonoBehaviour
     private void OnDestroy()
     {
         //TODO: Fix issue where we can unsubscribe from events and destroy annotation here, but model wont actually get removed in ObjViewManager due to us not being the owners of it
+        //If this really ends up being a problem we can pull this logic into an unloading routine that we remember to call, since we already probably need to for initialization
         this._annotationReference.annotationLocationDidChange -= UpdateAnnotationLocation;
         this._annotationReference.annotationTextDidChange -= UpdateAnnotationText;
 

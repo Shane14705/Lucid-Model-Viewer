@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class ObjectViewManager : RealtimeComponent<ObjectViewModel>
 {
-    //When we Instantiate an annotation prefab, use this variable to set the prefab's script values (ex: DictKey, model reference, etc)
+    //When we Instantiate an annotation prefab, use this to set the prefab's script values (ex: DictKey, model reference, etc)
     
     //REMEMBER: THIS IS NOT NETWORKED
     private Dictionary<AnnotationModel, AnnotationManager> _AnnotationRegistry = new Dictionary<AnnotationModel, AnnotationManager>();
@@ -29,7 +29,8 @@ public class ObjectViewManager : RealtimeComponent<ObjectViewModel>
         {
             previousModel.annotations.modelAdded -= _addCallback;
             previousModel.annotations.modelRemoved -= _removedCallback;
-            //TODO: Logic to destroy all annotation managers created for the previous ObjectViewModel? We need a way to register them when we create them.
+            
+            //Destroy all registered annotation managers
             foreach (var pair in _AnnotationRegistry)
             {
                 //This may or may not cause an issue, as OnDestroy in the AnnotationManager will attempt to remove its model from the old ObjectViewModel...
@@ -38,6 +39,7 @@ public class ObjectViewManager : RealtimeComponent<ObjectViewModel>
             }
         }
 
+        //If we implement persistence, this will reinstantiate all of the saved annotations in the model
         foreach (AnnotationModel newModel in this.model.annotations)
         {
             //Leaving remote parameter false for now
@@ -80,7 +82,6 @@ public class ObjectViewManager : RealtimeComponent<ObjectViewModel>
         Debug.Log("inserting?");
         try
         {
-            //TODO: FIX BUG WHERE ANNOTATIONMANAGER TRIES TO SETUP IMMEDIATELY AFTER BEING INSTANTIATED HERE, EVEN THOUGH ITS PARAMETERS DONT GET FILLED IN TILL LATER
             _AnnotationRegistry.Add(annotationModel, Instantiate(_annotationPrefab).GetComponent<AnnotationManager>());
         }
         catch (ArgumentException exception)
@@ -95,6 +96,9 @@ public class ObjectViewManager : RealtimeComponent<ObjectViewModel>
         //We could eventually be giving each piece of a 3d Model its own ObjectManager, in which case this becomes important. Probably should consider the performance issues of such a system though...
         _newAnnotationManager.ObjectManager = this;
         _newAnnotationManager.AnnotationReference = annotationModel;
+        annotationModel.annotationLocationDidChange += _newAnnotationManager.UpdateAnnotationLocation;
+        annotationModel.annotationTextDidChange += _newAnnotationManager.UpdateAnnotationText;
+
     }
 
     //Attempts to remove the annotation model from the data store, but first checks if the ID of the deleter is the one who owns the annotation
@@ -116,17 +120,5 @@ public class ObjectViewManager : RealtimeComponent<ObjectViewModel>
         
     }
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     
 }
