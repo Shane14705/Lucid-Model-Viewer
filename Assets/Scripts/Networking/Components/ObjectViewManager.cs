@@ -51,6 +51,25 @@ public class ObjectViewManager : RealtimeComponent<ObjectViewModel>
         //We could eventually be giving each piece of a 3d Model its own ObjectManager, in which case this becomes important. Probably should consider the performance issues of such a system though...
         _newAnnotationManager.ObjectManager = this;
     }
+
+    //Attempts to remove the annotation model from the data store, but first checks if the ID of the deleter is the one who owns the annotation
+    public bool RemoveAnnotation(AnnotationModel annotationModel)
+    {
+        //TODO: Come up with solution to remove a user's ownership over all of their models when they leave
+        if (annotationModel.creatorID == realtime.clientID)
+        {
+            this.model.annotations.Remove(annotationModel);
+            Debug.Log("Model cleared successfully!");
+            return true;
+
+        }
+        else
+        {
+            Debug.Log("RemoveAnnotation: Local user is not the user that created this annotation, and cannot delete it!");
+            return false;
+        }
+        
+    }
     
     // Start is called before the first frame update
     void Awake()

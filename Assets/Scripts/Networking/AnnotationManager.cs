@@ -24,11 +24,24 @@ public class AnnotationManager : MonoBehaviour
     }
 
     private ObjectViewManager _objectManager;
-
+    
     
     private void Awake()
     {
-        
+        this._annotationReference.annotationLocationDidChange += UpdateAnnotationLocation;    
+        this._annotationReference.annotationTextDidChange += UpdateAnnotationText;
+    }
+
+    //This function will handle changing the text that goes with the annotation
+    private void UpdateAnnotationText(AnnotationModel model, string value)
+    {
+        throw new NotImplementedException();
+    }
+
+    //This function will handle changing the point on the 3d model where the annotation should stem from
+    private void UpdateAnnotationLocation(AnnotationModel model, Vector3 value)
+    {
+        throw new NotImplementedException();
     }
 
     // Start is called before the first frame update
@@ -45,10 +58,10 @@ public class AnnotationManager : MonoBehaviour
 
     private void OnDestroy()
     {
-        //TODO: MAKE SURE THAT WE UNSUBSCRIBE FROM ALL EVENTS ON OUR MODEL BEFORE WE TELL THE OBJECTMANAGER TO REMOVE THE MODEL FROM THE DATASTORE
-        //How will I be getting a reference to our model? Should I do it through the DataStore?
-        
-        //TODO: something to the effect of taking our reference to the model, unsubscribing our events from it, and then passing our ID up to the ObjectViewManager to remove us from the DataStore
-        throw new NotImplementedException();
+        this._annotationReference.annotationLocationDidChange -= UpdateAnnotationLocation;
+        this._annotationReference.annotationTextDidChange -= UpdateAnnotationText;
+
+        //Remember, this must be the final call as the model will likely get GC'd soon after this, and we dont want null references
+        this._objectManager.RemoveAnnotation(this._annotationReference);
     }
 }
