@@ -16,7 +16,7 @@ public class AnnotationDebug : Editor
 
     public override void OnInspectorGUI()
     {
-        DrawDefaultInspector();
+        base.OnInspectorGUI();
         if (GUILayout.Button("Read Annotation and Location"))
         {
             try

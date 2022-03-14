@@ -13,16 +13,17 @@ public class ObjectViewDebugger : Editor
 
     private void OnEnable()
     {
-        //_manager = (ObjectViewManager)this.target;
+        _manager = (ObjectViewManager)this.target;
     }
 
     public override void OnInspectorGUI()
     {
-        DrawDefaultInspector();
+        base.OnInspectorGUI();
 
+        _currentString = EditorGUILayout.TextField(_currentString);
+        
         if (GUILayout.Button("Add Annotation"))
         {
-            _currentString = GUILayout.TextField(_currentString, 100);
             _manager.CreateAnnotation(_currentString, new Vector3(0,0,0));
         }
         

@@ -35,11 +35,8 @@ public class ObjectViewManager : RealtimeComponent<ObjectViewModel>
             annotationText = currentString
         };
 
-        //Add model to dictionary and increment key (pretty sure this key logic has to be networked in order to prevent duplicates) - some kind of owner ID?
-        //TODO: NETWORK THIS ID LOGIC SO IT IS NOT BROKEN - AS IS, WE WILL HAVE DUPLICATE ERRORS!
-        
-        //Which is faster for checking if an annotation exists at a certain location? Iterating through each model, or checking if a key exists. Scratch that second part: position changes.
-        this.model.annotations.Add(_newAnnotationModel);
+        //TODO: Check if an annotation already exists at the location and give the user the option to disable overlapping annotations
+                this.model.annotations.Add(_newAnnotationModel);
 
     }
 
@@ -75,7 +72,7 @@ public class ObjectViewManager : RealtimeComponent<ObjectViewModel>
     void Awake()
     {
         //Remote parameter tells whether the model was added remotely or locally...perhaps we should store the owner of each model with the annotation manager for permissions reasons
-        this.model.annotations.modelAdded += (set, annotationModel, remote) => DisplayAnnotation(annotationModel);
+        this.model.annotations.modelAdded += (set, annotationModel, remote) => Debug.Log("Model added!");
     }
 
     // Update is called once per frame
