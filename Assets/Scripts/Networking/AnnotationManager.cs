@@ -46,6 +46,7 @@ public class AnnotationManager : MonoBehaviour
 
     private void OnDestroy()
     {
+        //TODO: Fix issue where we can unsubscribe from events and destroy annotation here, but model wont actually get removed in ObjViewManager due to us not being the owners of it
         this._annotationReference.annotationLocationDidChange -= UpdateAnnotationLocation;
         this._annotationReference.annotationTextDidChange -= UpdateAnnotationText;
 
