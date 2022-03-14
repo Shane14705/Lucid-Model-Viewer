@@ -13,7 +13,7 @@ public class ObjectViewDebugger : Editor
 
     private void OnEnable()
     {
-        _manager = (ObjectViewManager)this.target;
+        //_manager = (ObjectViewManager)this.target;
     }
 
     public override void OnInspectorGUI()

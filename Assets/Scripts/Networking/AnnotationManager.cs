@@ -25,13 +25,6 @@ public class AnnotationManager : MonoBehaviour
 
     private ObjectViewManager _objectManager;
 
-    private uint _dictKey;
-
-    public uint DictKey
-    {
-        get => _dictKey;
-        set => _dictKey = value;
-    }
     
     private void Awake()
     {

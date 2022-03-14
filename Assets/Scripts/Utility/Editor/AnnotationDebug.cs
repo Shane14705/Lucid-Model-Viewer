@@ -21,7 +21,7 @@ public class AnnotationDebug : Editor
         {
             try
             {
-                Debug.Log("annotation with key: " + _annotationManager.DictKey + " at location: " +
+                Debug.Log("annotation at location: " +
                           _annotationManager.AnnotationReference.annotationLocation);
                 Debug.Log("Annotation string: " + _annotationManager.AnnotationReference.annotationText);
             }
