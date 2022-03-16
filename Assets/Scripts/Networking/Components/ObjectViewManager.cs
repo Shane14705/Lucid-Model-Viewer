@@ -5,6 +5,7 @@ using Normal.Realtime;
 using Normal.Realtime.Serialization;
 using UnityEngine;
 
+//This gameobject will have the 3D Model on it! We need to instantiate one of these for each model!
 public class ObjectViewManager : RealtimeComponent<ObjectViewModel>
 {
     //When we Instantiate an annotation prefab, use this to set the prefab's script values (ex: DictKey, model reference, etc)
