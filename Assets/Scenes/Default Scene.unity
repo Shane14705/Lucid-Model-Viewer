@@ -201,6 +201,8 @@ GameObject:
   - component: {fileID: 489123361}
   - component: {fileID: 489123362}
   - component: {fileID: 489123363}
+  - component: {fileID: 489123365}
+  - component: {fileID: 489123364}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -250,6 +252,41 @@ MonoBehaviour:
   _normcoreAppSettings: {fileID: 11400000, guid: e8fea0385a3e4024cbc9d6e345e9b382, type: 2}
   _roomToJoinOnStart: Test Room
   _joinRoomOnStart: 1
+--- !u!114 &489123364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489123360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c239a007eaad9148b84005851180810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &489123365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489123360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -363599832, guid: c424820a8880b8845bda10ec0b41507e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _realtime: {fileID: 489123363}
+  _sceneViewUUID: 
+  _viewUUID: 55820c0b-81b9-4762-a544-fcb45eb3b780
+  _sceneViewPreventOwnershipTakeover: 0
+  _sceneViewDestroyWhenOwnerOrLastClientLeaves: 1
+  _sceneViewDestroyWhenOwnerOrLastClientLeavesMigrated: 0
+  _sceneViewDestroyWhenLastClientLeaves: 1
+  _components:
+  - componentID: 1
+    component: {fileID: 489123364}
+  _childViews: []
 --- !u!1 &594066445
 GameObject:
   m_ObjectHideFlags: 0
