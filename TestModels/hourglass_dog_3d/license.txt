@@ -1,0 +1,11 @@
+Model Information:
+* title:	Hourglass Dog 3D
+* source:	https://sketchfab.com/3d-models/hourglass-dog-3d-4b42c9167cad4fbbb5e20dc6ea8ae9b0
+* author:	Utu-Nui (https://sketchfab.com/utu_nui)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Hourglass Dog 3D" (https://sketchfab.com/3d-models/hourglass-dog-3d-4b42c9167cad4fbbb5e20dc6ea8ae9b0) by Utu-Nui (https://sketchfab.com/utu_nui) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
