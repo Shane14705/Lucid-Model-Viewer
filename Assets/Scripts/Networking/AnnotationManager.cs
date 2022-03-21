@@ -24,7 +24,26 @@ public class AnnotationManager : MonoBehaviour
     }
 
     private ObjectViewManager _objectManager;
-    
+
+    private LineRenderer _lineRenderer;
+
+    private UIDisplay _uiManager;
+
+    private void OnEnable()
+    {
+        _lineRenderer = this.GetComponent<LineRenderer>();
+        _uiManager = this.GetComponentInChildren<UIDisplay>();
+    }
+
+    private void Start()
+    {
+        Vector3[] positions = new Vector3[2]
+        {
+            this.transform.localPosition, (this._uiManager.distanceFromModel * this._uiManager.uiPlacementLocalSpace)
+            
+        };
+        _lineRenderer.SetPositions(positions);
+    }
 
     //This function will handle changing the text that goes with the annotation
     public void UpdateAnnotationText(AnnotationModel model, string value)
@@ -35,7 +54,7 @@ public class AnnotationManager : MonoBehaviour
     //This function will handle changing the point on the 3d model where the annotation should stem from
     public void UpdateAnnotationLocation(AnnotationModel model, Vector3 value)
     {
-        throw new NotImplementedException();
+        
     }
 
     private void OnDestroy()
