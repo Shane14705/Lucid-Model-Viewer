@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DiscordProjectSettings">
+<<<<<<< Updated upstream
     <option name="show" value="PROJECT_FILES" />
+=======
+    <option name="show" value="ASK" />
+>>>>>>> Stashed changes
     <option name="description" value="" />
   </component>
 </project>

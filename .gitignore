@@ -184,3 +184,4 @@ sysinfo.txt
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 # End of https://www.toptal.com/developers/gitignore/api/unity,jetbrains
+.idea/.idea.Lucid-Model-Viewer/.idea/discord.xml
